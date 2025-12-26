@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Distributed Chat UI</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>Distributed Chat</h1>
+        <div id="conn">
+          <input id="username" placeholder="Username" />
+          <button id="connect">Connect</button>
+        </div>
+      </header>
+      <main>
+        <aside>
+          <h3>Members</h3>
+          <ul id="members"></ul>
+          <h3>Groups</h3>
+          <ul id="groups"></ul>
+        </aside>
+        <section>
+          <div id="chat"></div>
+          <div id="composer">
+            <label for="targetType">Target Type:</label>
+            <select id="targetType" name="targetType">
+              <option value="group">Group</option>
+              <option value="private">Private</option>
+            </select>
+            <input id="target" placeholder="group or username" />
+            <input id="message" placeholder="Message" />
+            <button id="send">Send</button>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
